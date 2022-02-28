@@ -1,0 +1,25 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/command-line.schema.json",
+  "commands": [
+    {
+      "commandKind": "bulk",
+      "name": "dev",
+      "summary": "Run the loader",
+      "description": "Run the loader with the other packages",
+      "incremental": false,
+      "enableParallelism": true,
+      "watchForChanges": false,
+      "ignoreMissingScript": true
+    },
+    {
+      "commandKind": "bulk",
+      "name": "build:watch",
+      "summary": "Run projects and watch for changes",
+      "description": "Run each package under packages and watch for changes",
+      "incremental": false,
+      "enableParallelism": true,
+      "watchForChanges": true
+    }
+  ],
+  "parameters": []
+}

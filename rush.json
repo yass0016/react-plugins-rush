@@ -1,0 +1,37 @@
+{
+  "$schema": "https://developer.microsoft.com/json-schemas/rush/v5/rush.schema.json",
+  "rushVersion": "5.62.4",
+  "pnpmVersion": "6.30.1",
+  "pnpmOptions": {
+    "strictPeerDependencies": false,
+    "useWorkspaces": false
+  },
+  "ensureConsistentVersions": false,
+  "eventHooks": {
+    "preRushInstall": [],
+    "postRushInstall": [],
+    "preRushBuild": [],
+    "postRushBuild": []
+  },
+  "telemetryEnabled": false,
+  "projects": [
+    {
+      "packageName": "loader",
+      "projectFolder": "packages/loader"
+    },
+    {
+      "packageName": "app",
+      "projectFolder": "packages/app"
+    },
+    {
+      "packageName": "project-one",
+      "projectFolder": "packages/project-one",
+      "cyclicDependencyProjects": ["loader"]
+    },
+    {
+      "packageName": "project-two",
+      "projectFolder": "packages/project-two",
+      "cyclicDependencyProjects": ["loader"]
+    }
+  ]
+}
